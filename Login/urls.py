@@ -20,8 +20,6 @@ from rest_framework_simplejwt import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/token/', views.TokenObtainPairView.as_view()),
-    path('api/token/refresh/', views.TokenRefreshView.as_view()),
-    path('api/', include('api.urls')),
+    path('', include('api.urls')),
     # path('', include('view.urls'))
 ]
